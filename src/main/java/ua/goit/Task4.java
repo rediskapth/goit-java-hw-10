@@ -16,7 +16,7 @@ public class Task4 {
         System.out.println(generator(A, C, M, seed).limit(5).collect(Collectors.toList()));
     }
 
-    public static Stream<Long> generator(long A, long C, long M, long seed) {
-        return Stream.iterate(seed, n -> (A * n + C) % M);
+    public static Stream<Long> generator(long a, long c, long m, long seed) {
+        return Stream.iterate(seed, n -> (a * n + c) % m);
     }
 }
